@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background: #050505;
+    color: #00ffcc;
+}
+
+/* Center */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card */
+.card {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    border: 2px solid transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 
+        0 0 20px red,
+        0 0 40px blue,
+        0 0 60px green;
+
+    animation: rgbGlow 2s infinite linear;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+
+    background: linear-gradient(90deg, #00ffcc, #00ffff, #00ffcc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px rgba(0,255,204,0.4),
+        0 0 20px rgba(0,255,255,0.2);
+
+    margin: 0;
+    position: relative;
+}
+
+/* animated underline effect */
+.title::after {
+    content: "";
+    width: 60%;
+    height: 2px;
+    background: #00ffcc;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: rgba(0, 255, 204, 0.7);
+    margin-top: 5px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Glow Animation */
+@keyframes rgbGlow {
+    0% {
+        box-shadow: 0 0 20px red, 0 0 40px blue, 0 0 60px green;
+    }
+    50% {
+        box-shadow: 0 0 40px blue, 0 0 60px green, 0 0 80px red;
+    }
+    100% {
+        box-shadow: 0 0 20px red, 0 0 40px blue, 0 0 60px green;
+    }
+}
+
+/* Title */
+.title {
+    text-align: center;
+    color: #00ffcc;
+    text-shadow: 0 0 15px #00ffcc;
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Inputs */
+.input {
+    width: 85%;
+    padding: 12px 14px;
+
+    border: 1px solid rgba(0, 255, 204, 0.4);
+    border-radius: 50px;
+
+    background: rgba(0, 0, 0, 0.6);
+    color: #00ffcc;
+
+    outline: none;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* focus effect */
+.input:focus {
+    border-color: #00ffff;
+    box-shadow:
+        0 0 10px rgba(0,255,255,0.4),
+        0 0 20px rgba(0,255,204,0.2);
+    transform: scale(1.03);
+}
+
+/* placeholder style */
+.input::placeholder {
+    color: rgba(0, 255, 204, 0.6);
+    letter-spacing: 1px;
+}
+
+.input:focus {
+    box-shadow: 0 0 12px #00ffcc;
+}
+
+/* Button (Slim Left/Right) */
+.btn {
+    width: 100%;
+    padding: 10px 8px;   /* 👈 reduced left/right */
+    border: 1px solid #00ffcc;
+    border-radius: 50px;
+    background: black;
+    color: #00ffcc;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+     width: auto;          /* 👈 full width ختم */
+    padding: 10px 20px; 
+     margin-top: 15px; 
+     margin-left:5px; /* left/right control */
+}
+
+/* Light effect */
+.btn::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #00ffff, transparent);
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    color: #00ffff;
+    border-color: #00ffff;
+    box-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffcc,
+        0 0 30px blue;
+    transform: scale(1.05);
+}
+
+/* Links */
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+/* anchor ko full width + center */
+.form a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* button center fix */
+.btn {
+    display: inline-block;
+}

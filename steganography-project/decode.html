@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Decode Message</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="center">
+
+<div class="card">
+
+<h2>Extract Secret Message</h2>
+
+<input type="file" id="imageInput"><br>
+
+<button class="btn decode" onclick="decodeMessage()">
+Decode Message
+</button>
+
+<p id="output"></p>
+
+<canvas id="canvas" style="display:none"></canvas>
+
+</div>
+
+<script src="js/decoder.js"></script>
+</body>
+</html>

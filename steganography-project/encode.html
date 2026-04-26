@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Encode Message</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="center">
+
+<div class="card">
+
+<h2>Hide Secret Message</h2>
+
+<input type="file" id="imageInput"><br>
+<textarea id="message" placeholder="Secret Message"></textarea><br>
+
+<button class="btn encode" onclick="encodeMessage()">
+Encode Image
+</button>
+
+<canvas id="canvas" style="display:none"></canvas>
+
+</div>
+
+<script src="js/encoder.js"></script>
+</body>
+</html>
