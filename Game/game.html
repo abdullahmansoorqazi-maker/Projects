@@ -1,0 +1,78 @@
+<!-- game.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sky Warfare</title>
+
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+
+  <!-- HUD -->
+
+  <div class="hud">
+
+    <div class="hud-box">
+      SCORE :
+      <span id="score">0</span>
+    </div>
+
+    <div class="hud-box">
+      LEVEL :
+      <span id="currentLevel">SLOW</span>
+    </div>
+    <div class="hud-box">
+  HIGH SCORE :
+  <span id="highScore">0</span>
+</div>
+    <div class="hud-box">
+      HEALTH :
+      <span id="health">100</span>
+    </div>
+
+  </div>
+
+  <!-- GAME AREA -->
+
+  <div id="gameArea">
+
+    <!-- PLAYER -->
+
+    <img
+      src="asid/images.png"
+      id="player"
+      alt="player"
+    >
+
+  </div>
+
+  <!-- GAME OVER -->
+
+  <div class="game-over"
+       id="gameOverScreen">
+
+    <h1>GAME OVER</h1>
+
+    <p>
+      FINAL SCORE :
+      <span id="finalScore">0</span>
+    </p>
+
+    <button onclick="restartGame()">
+      RESTART
+    </button>
+
+    <button onclick="goLevels()">
+      LEVELS
+    </button>
+
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/game.js"></script>
+
+</body>
+</html>

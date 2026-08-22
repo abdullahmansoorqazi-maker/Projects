@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>StegoCipher Dashboard</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>Code Technologist</h1>
+
+<p>
+Encryption & Steganography Tool
+</p>
+
+</header>
+
+
+
+<main class="dashboard">
+
+
+
+<!-- Text Cipher -->
+
+<section class="card">
+
+
+<h2>Text Caesar Cipher</h2>
+
+
+<textarea 
+id="inputText"
+placeholder="Enter your text">
+</textarea>
+
+
+
+<div class="shift">
+
+<button onclick="changeShift(-1)">
+-
+</button>
+
+
+<span id="shiftValue">
+3
+</span>
+
+
+<button onclick="changeShift(1)">
++
+</button>
+
+</div>
+
+
+
+<button onclick="encryptText()">
+Encode
+</button>
+
+
+<button onclick="decryptText()">
+Decode
+</button>
+
+
+
+<textarea
+id="outputText"
+placeholder="Output">
+</textarea>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- File Cipher -->
+
+
+<section class="card">
+
+
+<h2>File Caesar Cipher</h2>
+
+
+
+<input 
+type="file"
+id="fileInput">
+
+
+
+<label>
+Shift Value
+</label>
+
+
+<input
+type="number"
+id="fileShift"
+value="3">
+
+
+
+<br>
+
+
+<button onclick="encryptFile()">
+
+Encrypt File
+
+</button>
+
+
+
+<button onclick="decryptFile()">
+
+Decrypt File
+
+</button>
+
+
+
+<p id="fileStatus">
+
+No file processed
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Image Section -->
+
+
+<section class="card">
+
+
+<h2>Image Steganography</h2>
+
+<input 
+type="file"
+id="imageInput"
+accept="image/*">
+
+
+
+<textarea
+placeholder="Secret message">
+</textarea>
+
+
+<button>
+
+Encode Image
+
+</button>
+
+
+<button>
+
+Decode Image
+
+</button>
+
+
+</section>
+
+
+</main>
+
+
+
+
+<script src="assets/js/caesar.js"></script>
+
+<script src="assets/js/fileHandler.js"></script>
+
+
+</body>
+
+</html>

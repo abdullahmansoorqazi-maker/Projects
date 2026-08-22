@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sky Warfare</title>
+
+  <link rel="stylesheet" href="css/intro.css">
+</head>
+<body>
+
+  <!-- Intro Animation -->
+  <div class="intro-screen" id="introScreen">
+
+    <div class="glow-circle"></div>
+    <img style="height: 60px;" src="asid/images.png" alt=""> <h1 style="color: aqua;">Vs</h1><img style="height: 60px;" src="asid/16.png" alt="">
+    <h1 class="game-title">
+      SKY WARFARE
+    </h1>
+
+    <p class="tagline">
+      Ultimate Air Battle Experience
+    </p>
+
+    <div class="menu-buttons">
+
+      <button class="btn start-btn" onclick="startGame()">
+        START GAME
+      </button>
+
+      <button class="btn about-btn" onclick="showAbout()">
+        ABOUT US
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- About Popup -->
+  <div class="about-popup" id="aboutPopup">
+
+    <div class="about-box">
+
+      <h2>ABOUT GAME</h2>
+
+      <p>
+        Sky Warfare is an advanced airplane shooting game.
+        Destroy enemy planes using laser attacks and
+        complete all difficulty levels.
+      </p>
+
+      <button class="close-btn" onclick="closeAbout()">
+        CLOSE
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="js/intro.js"></script>
+
+</body>
+</html>

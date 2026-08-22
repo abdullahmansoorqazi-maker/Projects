@@ -1,0 +1,87 @@
+<!-- levels.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Select Level</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="level-page">
+
+    <h1 class="level-title">
+      SELECT LEVEL
+    </h1>
+
+    <div class="levels-container">
+
+      <!-- LEVEL 1 -->
+
+      <div class="level-card unlocked"
+           onclick="selectLevel('slow')">
+
+        <h2>SLOW</h2>
+
+        <p>Easy Mode</p>
+
+      </div>
+
+      <!-- LEVEL 2 -->
+
+      <div class="level-card locked"
+           id="mediumLevel">
+
+        <div class="lock">🔒</div>
+
+        <h2>MEDIUM</h2>
+
+        <p>Normal Mode</p>
+
+      </div>
+
+      <!-- LEVEL 3 -->
+
+      <div class="level-card locked"
+           id="fastLevel">
+
+        <div class="lock">🔒</div>
+
+        <h2>FAST</h2>
+
+        <p>Hard Mode</p>
+
+      </div>
+
+      <!-- LEVEL 4 -->
+
+      <div class="level-card locked"
+           id="extremeLevel">
+
+        <div class="lock">🔒</div>
+
+        <h2>EXTREME</h2>
+
+        <p>Insane Mode</p>
+
+      </div>
+
+    </div>
+
+    <button class="back-btn"
+            onclick="goBack()">
+
+      ← BACK
+
+    </button>
+
+  </div>
+
+  <script src="js/levels.js"></script>
+
+</body>
+</html>
